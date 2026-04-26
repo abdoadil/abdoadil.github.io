@@ -131,6 +131,42 @@
 
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-size: clamp(3rem, 5vw, 5rem); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1px; }
+
+        /* New Roles & Socials Styling */
+        .hero-roles {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+        .hero-socials {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .hero-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            transition: 0.3s ease;
+        }
+        .hero-socials a:hover {
+            background: var(--accent-gradient);
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4);
+        }
+        
+        
         .hero-text p { max-width: 650px; font-size: 1.15rem; color: var(--text-dim); margin-bottom: 2rem; }
 
         /* Profile Picture Styling & Animation */
@@ -331,6 +367,8 @@
             .hero-text p { margin: 0 auto 2rem; }
             .stats-container { justify-content: center; }
             .contact-wrapper { grid-template-columns: 1fr; }
+            .hero-roles { text-align: center; }
+            .hero-socials { justify-content: center; }
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -362,6 +400,14 @@
         <div class="hero-content">
             <div class="hero-text reveal">
                 <h1>Abdalmahmoud<br><span>Adil Alnoor</span></h1>
+
+                <h3 class="hero-roles">Data Scientist | Data-Driven Business Strategy | ML & DL Specialist | Advanced Statistical Analysis</h3>
+                
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/abdalmahmoud-adil/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
                 <p>Data-driven and results-oriented Data Scientist proven ability to translate business problems into actionable insights using advanced statistical techniques and deep learning bridging the gap between theoretical Mathematics and Information Technology.</p>
                 
                 <div class="stats-container">
