@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdalmahmoud Adil Alnoor </title>
+	<!-- Force the browser to download the hero image immediately -->
+    <link rel="preload" as="image" href="profile.jpg">
     <meta name="title" content="Abdalmahmoud Adil Alnoor | Data Science">
     <meta name="description" content="Portfolio of Abdalmahmoud Adil Alnoor (Abdo Adil), a Data Scientist specializing in Machine Learning, Computer Vision, and Mathematical Foundations.">
     <meta name="keywords" content="Abdalmahmoud Adil Alnoor, Abdalmahmood Adil Alnour, Data Scientist, Machine Learning, Computer Vision, Deep Learning, Smart Retail, Mathematics, Python, Chandigarh University, Portfolio, Vignan University">
@@ -20,7 +22,9 @@
     <link rel="icon" type="image/png" href="https://github.com/abdoadil/abdoadil.github.io/blob/main/favicon.png?raw=true">
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Asynchronous loading for FontAwesome to prevent render-blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7589859569108858"
      crossorigin="anonymous"></script>
@@ -913,43 +917,25 @@
                 }
             }
         }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on initial load
-
-        // Number Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        let hasCounted = false;
-
-        function animateCounters() {
-            if(hasCounted) return;
+        // Wait until the HTML is fully loaded before calculating animations
+        document.addEventListener('DOMContentLoaded', () => {
             
-            const statsSection = document.querySelector('.stats-container');
-            if(!statsSection) return;
+            // Trigger initial scroll reveal
+            reveal(); 
             
-            const sectionPos = statsSection.getBoundingClientRect().top;
-            const screenPos = window.innerHeight;
+            // Start the counter animation timeout
+            setTimeout(animateCounters, 500);
 
-            if(sectionPos < screenPos) {
-                hasCounted = true;
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const duration = 2000; // 2 seconds
-                    const increment = target / (duration / 16); // 60fps
-                    
-                    let current = 0;
-                    const updateCounter = () => {
-                        current += increment;
-                        if(current < target) {
-                            counter.innerText = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCounter();
-                });
+            // Initialize Slider if it exists on the page
+            if(typeof slides !== 'undefined' && slides.length > 0) {
+                startSlideShow();
+                const sliderContainer = document.querySelector('.slider-container');
+                if(sliderContainer) {
+                    sliderContainer.addEventListener('mouseenter', stopSlideShow);
+                    sliderContainer.addEventListener('mouseleave', startSlideShow);
+                }
             }
-        }
+        });
 
         window.addEventListener('scroll', animateCounters);
         setTimeout(animateCounters, 500); 
