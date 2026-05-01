@@ -423,17 +423,63 @@
             .hero-socials { justify-content: center; }
         }
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            /* Mobile Hamburger Icon - Hidden on Computers */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+        .menu-toggle:hover { color: var(--accent); }
+
+        /* Mobile Screen Styles */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; } /* Show icon on phones */
+            
+            /* The Dropdown Menu Menu */
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(3, 5, 8, 0.95);
+                backdrop-filter: blur(15px);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem 0;
+                gap: 1.5rem;
+                transform: translateY(-150%); /* Hide it by pushing it up */
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+                z-index: -1;
+            }
+            
+            /* When the menu is tapped and active */
+            .nav-links.active {
+                transform: translateY(0); /* Slide down */
+                opacity: 1;
+            }
+            
             .hero h1 { font-size: 2.8rem; }
             section { padding: 80px 5%; }
             .hero-image-wrapper { width: 280px; height: 280px; }
+        }
         }
     </style>
 </head>
 <body>
 
     <nav id="navbar">
+        <nav id="navbar">
         <a href="#home" class="logo">ABDO <span>ADIL</span></a>
+        
+        <!-- NEW HAMBURGER MENU ICON -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#education">Education</a></li>
@@ -443,10 +489,11 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#workshops">Conferences</a></li>
             <li><a href="#projects">Projects</a></li>
-	    <li><a href="#updates">Updates</a></li>
+			<li><a href="#updates">Updates</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
     </nav>
 
     <header id="home" class="hero">
@@ -778,6 +825,14 @@
                         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7394404040828317696?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                     </div>
 
+					<div class="slide">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7404115085247287297?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>
+
+					<div class="slide">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7372501403182944256?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>
+
                 </div>
             </div>
             
@@ -881,6 +936,32 @@
 
     <script>
         // Navbar Scroll Effect
+		// Mobile Menu Toggle Logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const mobileMenuIcon = mobileMenu.querySelector('i');
+
+        // Open/Close menu when clicking the hamburger
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Swap between 'hamburger' and 'X' icon
+            if(navLinks.classList.contains('active')){
+                mobileMenuIcon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+
+        // Close menu automatically when a link is clicked
+        const navItems = document.querySelectorAll('.nav-links li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+		
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
