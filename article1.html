@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Article Title Here | Abdalmahmoud Adil Alnoor</title>
+    <meta name="description" content="A short, 1-2 sentence summary of what this article is about to show up on Google search results.">
+    <meta name="keywords" content="Data Science, Machine Learning, Add Your Specific Keywords Here">
+    <meta name="author" content="Abdalmahmoud Adil Alnoor">
+
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg: #030508;
+            --card-bg: #0b0e14;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+
+        /* Minimal Navbar */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(3, 5, 8, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 1000;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--text-main); }
+        .logo span { color: var(--accent); }
+        .back-btn { font-size: 0.9rem; font-weight: 600; color: var(--text-dim); display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .back-btn:hover { color: var(--accent); transform: translateX(-5px); }
+
+        /* Article Header */
+        .article-header { padding: 150px 10% 50px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .article-meta { display: flex; justify-content: center; gap: 20px; color: var(--accent); font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .article-meta span { display: flex; align-items: center; gap: 8px; }
+        .article-header h1 { font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.2; }
+        .header-image { width: 100%; max-height: 450px; object-fit: cover; border-radius: 20px; border: 1px solid var(--border); margin-top: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        /* Article Content Body */
+        .article-content { max-width: 800px; margin: 0 auto 100px; padding: 0 5%; font-size: 1.15rem; color: var(--text-dim); }
+        .article-content h2 { color: var(--text-main); font-size: 1.8rem; margin: 2.5rem 0 1rem; }
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content strong { color: var(--text-main); }
+        .article-content ul { margin-bottom: 1.5rem; padding-left: 2rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        
+        .article-tags { display: flex; gap: 10px; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap;}
+        .tag { background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 50px; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--border); }
+
+        footer { text-align: center; padding: 40px 10%; border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">ABDO <span>ADIL</span></a>
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </nav>
+
+    <header class="article-header">
+        <div class="article-meta">
+            <span><i class="fa-solid fa-calendar-days"></i> [Date Here]</span>
+            <span><i class="fa-solid fa-clock"></i> [X] min read</span>
+        </div>
+        <h1>[Your Awesome Article Title Goes Here]</h1>
+        
+        <img src="https://via.placeholder.com/900x450/0b0e14/3b82f6?text=Article+Feature+Image" alt="Article Feature Image" class="header-image">
+    </header>
+
+    <main class="article-content">
+        <p>Start pasting the introduction to your article right here. This font is slightly larger and highly legible, making it perfect for reading long-form technical content on both mobile phones and desktop computers.</p>
+
+        <h2>Use headings to break up topics</h2>
+        <p>When you provide me with the text of your post, I will format it perfectly with nice paragraphs, bold text for emphasis, and bullet points if needed.</p>
+
+        <div class="article-tags">
+            <span class="tag">#DataScience</span>
+            <span class="tag">#MachineLearning</span>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">&copy; 2026 Abdalmahmoud Adil Alnoor. Bridging Mathematics and Machine Learning.</p>
+    </footer>
+
+</body>
+</html>
