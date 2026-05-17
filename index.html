@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdalmahmoud Adil Alnoor </title>
+    
     <link rel="preload" as="image" href="profile.jpg">
+    
     <meta name="title" content="Abdalmahmoud Adil Alnoor | Data Science">
     <meta name="description" content="Portfolio of Abdalmahmoud Adil Alnoor (Abdo Adil), a Data Scientist specializing in Machine Learning, Computer Vision, and Mathematical Foundations.">
     <meta name="keywords" content="Abdalmahmoud Adil Alnoor, Abdalmahmood Adil Alnour, Data Scientist, Machine Learning, Computer Vision, Deep Learning, Smart Retail, Mathematics, Python, Chandigarh University, Portfolio, Vignan University">
@@ -23,114 +25,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7589859569108858"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7589859569108858" crossorigin="anonymous"></script>
     
     <style>
-
-    /* Updates & Embedded LinkedIn Slider */
-        .slider-container {
-            position: relative;
-            max-width: 600px; /* Snug fit for 504px wide iframes */
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-            padding: 2rem 0; /* Breathing room top and bottom */
-        }
-        .slider-track {
-            display: flex;
-            transition: transform 0.6s ease-in-out;
-            align-items: center; /* Centers iframes of varying heights */
-        }
-        .slide {
-            min-width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        .slide iframe {
-            border-radius: 12px;
-            max-width: 90%; /* Ensures it shrinks on mobile phones */
-            background: #ffffff; /* LinkedIn posts need a white background */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 25px;
-        }
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--glass-strong);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .dot.active {
-            background: var(--accent);
-            transform: scale(1.3);
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-        }
-
-        /* Custom Article Slide Styling */
-        .custom-article-slide {
-            flex-direction: column;
-            justify-content: flex-start;
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            width: 90%; /* Keeps it neat on mobile and desktop */
-            margin: 0 auto;
-            border: 1px solid var(--border);
-        }
-        .custom-article-slide img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border);
-        }
-        .custom-article-slide .slide-content {
-            padding: 2rem;
-            text-align: left;
-        }
-        .custom-article-slide .slide-content h3 {
-            color: var(--text-main);
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-        .custom-article-slide .slide-content p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3; /* Truncates long text */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .read-more-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background: rgba(10, 102, 194, 0.1); 
-            color: #60a5fa;
-            border: 1px solid rgba(10, 102, 194, 0.3);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .read-more-btn:hover {
-            background: #0a66c2; 
-            color: #fff;
-            border-color: transparent;
-            transform: translateY(-2px);
-        }
-
         :root {
             --bg: #030508;
             --card-bg: #0b0e14;
@@ -184,6 +81,16 @@
         .logo { font-weight: 800; font-size: 1.2rem; color: var(--text-main); transition: 0.3s; }
         .logo span { color: var(--accent); }
         .logo:hover { transform: scale(1.05); }
+
+        /* Mobile Hamburger Icon */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+        .menu-toggle:hover { color: var(--accent); }
 
         .nav-links { display: flex; list-style: none; gap: 1.5rem; }
         .nav-links a { 
@@ -273,7 +180,6 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4);
         }
-        
         
         .hero-text p { max-width: 650px; font-size: 1.15rem; color: var(--text-dim); margin-bottom: 2rem; }
 
@@ -380,6 +286,116 @@
         .list-item:hover { background: var(--glass-strong); color: var(--text-main); transform: translateX(10px); border-left: 3px solid var(--accent); }
         .list-item:hover i { transform: scale(1.2); }
 
+        /* Slider Restructure CSS */
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            padding: 2rem 0; 
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+            align-items: center; 
+        }
+        
+        /* The SLIDE holds the width */
+        .slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 15px; /* Keeps elements away from the edge */
+        }
+        
+        /* The IFRAMES inside the slide */
+        .slide iframe {
+            border-radius: 12px;
+            width: 100%;
+            max-width: 504px;
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* The CUSTOM CARD inside the slide */
+        .custom-article-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 504px; /* Matches iframe max-width */
+            border: 1px solid var(--border);
+        }
+        .custom-article-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+        .custom-article-card .slide-content {
+            padding: 2rem;
+            text-align: left;
+        }
+        .custom-article-card h3 {
+            color: var(--text-main);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .custom-article-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(10, 102, 194, 0.1); 
+            color: #60a5fa;
+            border: 1px solid rgba(10, 102, 194, 0.3);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .read-more-btn:hover {
+            background: #0a66c2; 
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--glass-strong);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
         /* Contact Section & Form */
         .contact-wrapper {
             display: grid;
@@ -479,7 +495,30 @@
             .hero-socials { justify-content: center; }
         }
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(3, 5, 8, 0.95);
+                backdrop-filter: blur(15px);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem 0;
+                gap: 1.5rem;
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+                z-index: -1;
+            }
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
             .hero h1 { font-size: 2.8rem; }
             section { padding: 80px 5%; }
             .hero-image-wrapper { width: 280px; height: 280px; }
@@ -490,6 +529,11 @@
 
     <nav id="navbar">
         <a href="#home" class="logo">ABDO <span>ADIL</span></a>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#education">Education</a></li>
@@ -499,7 +543,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#workshops">Conferences</a></li>
             <li><a href="#projects">Projects</a></li>
-        <li><a href="#updates">Updates</a></li>
+            <li><a href="#updates">Updates</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -622,9 +666,6 @@
                 <p><strong>Data Analysis with Python</strong></p>
                 <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px;"> Using visualization and statistical measures to refine and select the best performing models.</p>
             </div>
-
-
-            
         </div>
         <p class="reveal" style="text-align: center; margin-top: 3rem; color: var(--accent); font-weight: 600;">
             <i class="fa-solid fa-plus"></i> 15 More Certificates in specialized Technology areas
@@ -658,36 +699,28 @@
             
             <div class="card reveal">
                 <span class="date">Accepted Paper</span>
-                
                     <h3 style="margin-top: 10px;">MICRO 2026 <i class= style="font-size: 0.8rem;"></i></h3>
-                </a>
                 <p><strong>Establishing the Superiority of Artificial Neural Networks over Traditional ML Classifiers in Breast Cancer Prediction</strong></p>
                 <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px;">Breast Cancer prediction accepted at the MICRO 2026 Conference, Uttar Pradesh, India.</p>
             </div>
 
             <div class="card reveal">
                 <span class="date">Accepted Paper</span>
-                
                     <h3 style="margin-top: 10px;">MLIP-2026 <i class= style="font-size: 0.8rem;"></i></h3>
-                </a>
                 <p><strong>Perceptual Image Quality Enhancement using a U-Net based Conditional Generative Adversarial Network</strong></p>
                 <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px;">Image Quality Enhancement accepted at the MLIP-2026 Conference, Kerala, India.</p>
             </div>
 
             <div class="card reveal">
                 <span class="date">Communicated Paper</span>
-                
                     <h3 style="margin-top: 10px;">Inter Journal of Computing and Digital Systems <i class= style="font-size: 0.8rem;"></i></h3>
-                </a>
                 <p><strong>Renewable Energy Forecasting Using Multiple Linear Regression: A Comprehensive Study</strong></p>
                 <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px;">The submission has passed the preliminary review in IJCDS Journal. </p>
             </div>
 
             <div class="card reveal">
                 <span class="date">Conference Presentation</span>
-                
                     <h3 style="margin-top: 10px;">ICAMSF 2025 <i class= style="font-size: 0.8rem;"></i></h3>
-                </a>
                 <p><strong>Poster Presentation Achievement</strong></p>
                 <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 10px;">Research findings exchanged within an international forum at Chandigarh University.</p>
             </div>
@@ -796,7 +829,7 @@
             
             <div class="card reveal" style="transition-delay: 0.1s;">
                 <h3><i class="fa-solid fa-chart-line" style="color: var(--accent);"></i> Live Climate Impact Dashboard</h3>
-                <p style="color: var(--text-dim); margin-top: 10px; font-size: 0.95rem;">Developed interactive visualizations of temperature changes utilizing <strong>NASA and NOAA<strong>.</p>
+                <p style="color: var(--text-dim); margin-top: 10px; font-size: 0.95rem;">Developed interactive visualizations of temperature changes utilizing <strong>NASA and NOAA</strong>.</p>
             </div>
 
             <div class="card reveal">
@@ -813,27 +846,58 @@
             <div class="slider-container">
                 <div class="slider-track" id="sliderTrack">
                     
-                    <div class="slide custom-article-slide">
-                        <img src="image_19602e.jpg" alt="Chapter Closed Preview">
-                        <div class="slide-content">
-                            <h3>Chapter Closed 📖</h3>
-                            <p>As I get ready to close this incredibly rewarding chapter of my Master's journey, reaching this milestone feels surreal. Looking back at the early delays and stumbling blocks in my education...</p>
-                            <a href="chapter-closed.html" class="read-more-btn">
-                                Read Full Article <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                    <div class="slide custom-article-slide">
-                        <img src="image_197a72.png" alt="Scopus Indexing Preview" style="object-fit: contain; background: #fff; padding: 10px;">
-                        <div class="slide-content">
-                            <h3>Research Indexed in Scopus 🚀</h3>
-                            <p>Thrilled to share that my research is now officially indexed in Scopus! It is now part of the database following its presentation at the IEEE ICTBIG 2025 conference...</p>
-                            <a href="scopus-indexed.html" class="read-more-btn">
-                                Read Full Article <i class="fa-solid fa-arrow-right"></i>
-                            </a>
+                    <div class="slide">
+                        <div class="custom-article-card">
+                            <img src="image_19602e.jpg" alt="Chapter Closed Preview" onerror="this.src='https://via.placeholder.com/600x280/0b0e14/3b82f6?text=Article+Image'">
+                            <div class="slide-content">
+                                <h3>Chapter Closed 📖</h3>
+                                <p>As I get ready to close this incredibly rewarding chapter of my Master's journey, reaching this milestone feels surreal. Looking back at the early delays and stumbling blocks in my education...</p>
+                                <a href="chapter-closed.html" class="read-more-btn">
+                                    Read Full Article <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="slide">
+                        <div class="custom-article-card">
+                            <img src="image_197a72.png" alt="Scopus Indexing Preview" onerror="this.src='https://via.placeholder.com/600x280/ffffff/0b0e14?text=Scopus+Image'" style="background-color: #fff; padding: 10px; object-fit: contain;">
+                            <div class="slide-content">
+                                <h3>Research Indexed in Scopus 🚀</h3>
+                                <p>Thrilled to share that my research is now officially indexed in Scopus! It is now part of the database following its presentation at the IEEE ICTBIG 2025 conference...</p>
+                                <a href="scopus-indexed.html" class="read-more-btn">
+                                    Read Full Article <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="slide">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7393667795953250304?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="slide">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7394404040828317696?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="slide">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7404115085247287297?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="slide">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7372501403182944256?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post" loading="lazy"></iframe>
+                    </div>
+
                 </div>
+            </div>
+            
+            <div class="slider-dots" id="sliderDots">
+                <div class="dot active" onclick="goToSlide(0)"></div>
+                <div class="dot" onclick="goToSlide(1)"></div>
+                <div class="dot" onclick="goToSlide(2)"></div>
+                <div class="dot" onclick="goToSlide(3)"></div>
+                <div class="dot" onclick="goToSlide(4)"></div>
+                <div class="dot" onclick="goToSlide(5)"></div>
             </div>
         </div>
     </section>
@@ -937,13 +1001,35 @@
             }
         });
 
+        // Mobile Menu Toggle Logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const mobileMenuIcon = mobileMenu.querySelector('i');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if(navLinks.classList.contains('active')){
+                mobileMenuIcon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+
+        const navItems = document.querySelectorAll('.nav-links li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+
         // Scroll Reveal Animations with staggered effect
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // when to trigger the animation
+                var elementVisible = 100;
                 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -951,7 +1037,7 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // Trigger on initial load
+        reveal(); 
 
         // Number Counter Animation
         const counters = document.querySelectorAll('.counter');
@@ -959,10 +1045,8 @@
 
         function animateCounters() {
             if(hasCounted) return;
-            
             const statsSection = document.querySelector('.stats-container');
             if(!statsSection) return;
-            
             const sectionPos = statsSection.getBoundingClientRect().top;
             const screenPos = window.innerHeight;
 
@@ -970,9 +1054,8 @@
                 hasCounted = true;
                 counters.forEach(counter => {
                     const target = +counter.getAttribute('data-target');
-                    const duration = 2000; // 2 seconds
-                    const increment = target / (duration / 16); // 60fps
-                    
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
                     let current = 0;
                     const updateCounter = () => {
                         current += increment;
@@ -991,8 +1074,7 @@
         window.addEventListener('scroll', animateCounters);
         setTimeout(animateCounters, 500); 
     
-    
-        // Updates Slider Logic
+        // Updates Slider Logic - 5 Seconds Loop
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const track = document.getElementById('sliderTrack');
@@ -1018,7 +1100,8 @@
         }
 
         function startSlideShow() {
-            slideInterval = setInterval(nextSlide, 3000); // Changes every 3 seconds
+            // Set to exactly 5000 milliseconds (5 seconds)
+            slideInterval = setInterval(nextSlide, 5000); 
         }
 
         function stopSlideShow() {
@@ -1029,7 +1112,6 @@
         if(slides.length > 0) {
             startSlideShow();
             const sliderContainer = document.querySelector('.slider-container');
-            // Pause on hover so user can read the LinkedIn post
             if(sliderContainer) {
                 sliderContainer.addEventListener('mouseenter', stopSlideShow);
                 sliderContainer.addEventListener('mouseleave', startSlideShow);
