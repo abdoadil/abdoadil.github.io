@@ -28,46 +28,6 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7589859569108858" crossorigin="anonymous"></script>
     
     <style>
-        /* --- Google Translate Widget Customization --- */
-        #google_translate_element select {
-            background: var(--glass-strong);
-            color: var(--text-main);
-            border: 1px solid var(--border);
-            padding: 5px 10px;
-            border-radius: 8px;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.8rem;
-            cursor: pointer;
-            outline: none;
-        }
-        #google_translate_element select option {
-            background: var(--card-bg);
-            color: var(--text-main);
-        }
-        /* Hides the "Powered by Google" text */
-        .goog-te-gadget { color: transparent !important; font-size: 0px; }
-        .goog-te-gadget .goog-te-combo { margin: 0; }
-        
-        /* Hides the ugly Google Translate top banner */
-        .skiptranslate iframe { display: none !important; }
-        body { top: 0 !important; }
-
-        /* --- Right-to-Left (RTL) formatting when Arabic is selected --- */
-        html.translated-rtl body {
-            direction: rtl;
-            text-align: right;
-            /* Optional: Add Arabic font support here if you linked one like Tajawal */
-        }
-        /* Fixes the hero section layout when flipped to Arabic */
-        html.translated-rtl .hero-content {
-            flex-direction: row-reverse; 
-        }
-        html.translated-rtl .contact-wrapper {
-            direction: rtl;
-        }
-
-
-
         
         :root {
             --bg: #030508;
@@ -587,7 +547,6 @@
             <li><a href="#updates">Updates</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li id="google_translate_element"></li>
         </ul>
     </nav>
 
@@ -1220,16 +1179,5 @@
             }
         }
     </script>  
-    <!-- Google Translate Scripts -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en', 
-                includedLanguages: 'ar,en', /* Restricts it to English and Arabic */
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
